@@ -1,0 +1,95 @@
+<mk-box header="Add Driver" [isLoading]="isLoading" [isCollapsed]="true" [isCollapsable]="true" [isRemovable]="false">
+  <div class="box box-info">
+    
+   
+    <form >
+      <div class="box-body">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label>First Name*</label>
+                <input  class="form-control" type="text" placeholder="First Name">               
+              </div>
+
+              <div class="form-group col-md-4">
+                <label>Last Name*</label>
+                <input class="form-control" type="text" placeholder="Last Name">                
+              </div>
+        </div>
+        <div class="form-group">
+          <label>Driver ID*</label>
+          <input class="form-control" type="text" placeholder="Driver ID">    
+        </div>
+        <div class="form-group">
+          <label>Email*</label>
+          <input class="form-control" type="text" placeholder="Enter Driver Email">    
+        </div> 
+            
+        <div  class="row">
+          <div class="form-group col-md-4">
+            <label>Zipcode*</label>
+            <input  mask="00000" class="form-control" type="text" placeholder="Enter Zipcode">
+           
+          </div>
+
+          <div class="form-group col-md-4">
+            <label>State</label>
+            <input  readonly class="form-control" type="text" placeholder="State">
+            
+          </div>
+
+          <div class="form-group col-md-4">
+            <label>City</label>         
+            
+            
+                <select class="form-control">
+                  <option value="">City1</option>
+                  <option value="">City2</option>
+                  <option value="">City3</option>
+                  <option value="">City4</option>
+                  <option value="">City5</option>
+                </select>              
+
+            
+          </div>
+
+        </div>
+
+        <div class="form-group">
+        <label>Device ID</label> 
+          <select class="form-control">
+              <option value="">PB01B60012</option>
+              <option value="">PB01B60301</option>
+              <option value="">PB01B60005</option>
+              <option value="">PB01B60016</option>
+              <option value="">PR8WBB0048</option>
+          </select> 
+        </div>
+
+           
+       
+           
+      </div>
+      <!-- /.box-body -->
+
+      <div class="box-footer">     
+        <button  type="submit" class="btn btn-primary">Add Driver </button>
+      </div>
+    </form>
+  </div>
+</mk-box>
+
+<mk-box header="Drivers Listing" [isLoading]="isLoading"  [isCollapsable]="false" [isRemovable]="false">
+  
+  <ngx-datatable
+        class="bootstrap"
+        [rows]="rows"
+        [columns]="columns"        
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="50"
+    >
+  </ngx-datatable>
+
+  
+</mk-box>
